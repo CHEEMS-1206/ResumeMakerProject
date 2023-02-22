@@ -1,19 +1,23 @@
+/* size adjustment of the main container  */
 .chooseOptPage {
   height: calc(95vh + 1px);
   width: 100vw;
 }
 
+/* common style for the header choiceHolder and footer  */
 .header, .choiceHolder, .footer {
   display: flex;
   width: 100%;
 }
-
+/* common style for the headerand footer  */
 .header,.footer {
   background-color: #2f58cd;
   color: white;
   align-items: center;
   display: flex;
 }
+
+/* styling th header  */
 .header {
   height: 15%;
   font-size: 50px;
@@ -21,11 +25,13 @@
   font-weight: 900;
 }
 
+/* styling the footer  */
 .footer {
   height: 7%;
   justify-content: center;
 }
 
+/* styling the choiceholder  */
 .choiceHolder {
   height: calc(100% - 17%);
   padding: 0px 100px;
@@ -48,14 +54,19 @@
     color: crimson;
     font-size: 40px;
 }
+
+/* styling the image  */
 .choiceImage{
     height: 250px;
     width: 190px;
+    margin: 20px 0px;
 }
 
+/* styles for the title  */
 .title{
     font-size: 42px;
     width: 100%;
+    color :#2f58cd;
     text-align: left;
 }
 
