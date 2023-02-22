@@ -1,0 +1,88 @@
+.chooseOptPage {
+  height: calc(95vh + 1px);
+  width: 100vw;
+}
+
+.header, .choiceHolder, .footer {
+  display: flex;
+  width: 100%;
+}
+
+.header,.footer {
+  background-color: #2f58cd;
+  color: white;
+  align-items: center;
+  display: flex;
+}
+.header {
+  height: 15%;
+  font-size: 50px;
+  padding: 0px 30px;
+  font-weight: 900;
+}
+
+.footer {
+  height: 7%;
+  justify-content: center;
+}
+
+.choiceHolder {
+  height: calc(100% - 17%);
+  padding: 0px 100px;
+}
+.choiceHolder > div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.definitionBox{
+    padding: 0px 50px;
+}
+.choiceDefinition{
+    font-size: 18px;
+    text-align: justify;
+}
+.choiceDefinition::first-letter{
+    color: crimson;
+    font-size: 40px;
+}
+.choiceImage{
+    height: 250px;
+    width: 190px;
+}
+
+.title{
+    font-size: 42px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Styling the buttons */
+.selectChoice{
+    height: max-content;
+    min-width: 250px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    color:white;
+    outline: none;
+    border: none;
+}
+#RESUME{
+    background-color: crimson;
+}
+#RESUME:hover, #COVERLETTER:hover, #ABOUTME:hover{
+    transform: scale3d(1.02, 1.1, 20);
+    transition: all 0.3s ease-in;
+}
+#COVERLETTER{
+    background-color: #1abc9c;
+}
+#ABOUTME{
+    background-color: #2f58cd;
+}
+
