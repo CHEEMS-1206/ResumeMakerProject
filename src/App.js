@@ -1,11 +1,13 @@
 import './StyleSheets/App.css';
-import Choices from './Components/Selector/Choices';
+import { RouterProvider } from 'react-router-dom';
+
+import routerName from './Components/Routs/Routs';
 
 function App() {
   return (
-    <div>
-      <Choices/>
-    </div>
+    <>
+      <RouterProvider router={routerName}/>
+    </>
   );
 }
 
