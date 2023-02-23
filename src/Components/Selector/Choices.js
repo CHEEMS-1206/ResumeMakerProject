@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import '../../StyleSheets/Choices.css'
 
+// importing useNavigate for naivigating across pages
+import { useNavigate } from "react-router-dom";
+
 // IMPORTED IMAGES
 import resume from '../Images/resume.jpg'
 import myPic from "../Images/logo.png";
@@ -19,6 +22,8 @@ const Choices = () =>{
     "Priyanshu Singh || Junior, B-tech ECE at MSIT || Full Stack Web developer || MERN || DSA - C++ || Expert @ Codestudio || OOP in JS, PHP, C++ || Linux Web development enthusiast, have a Solid foundational grip in front end technologies and frameworks. React developer, prefer Mysql as the database with Php as the backend language. Have made several fronted projects (can be found in my github repos).";
   const aboutApp =
     "Resume Maker is a handy tool that can be used to make a resume or a cover letter by just filling inthe details directly into the input fields. It is easy to use and versatile, just chose among multiple templates fill in the details and get your resume downloaded in a single click. Choose your option from the list to the right and get started.";
+
+  let navigateToNewPath = useNavigate();
 
   // state defining
   const [paraContent, setParaContent] = useState(aboutApp); // state of the para content
@@ -45,6 +50,22 @@ const Choices = () =>{
       setParaContent((prevdata) => (prevdata = aboutMe));
     }
   }
+  // function clickHandler to handle click for visiting pages
+  // we define path depending on the button clicked and jump to that page using navigate
+  function clickHandler(event){
+    let path = ""
+    if(event.target.id === "RESUME"){
+      path = "ResumeTemplates";
+    }
+    else if (event.target.id === "COVERLETTER"){
+      path = "CoverLetterTemplates";
+    }
+    else if (event.target.id === "ABOUTME") {
+      path = "AboutMe";
+    }
+    navigateToNewPath(path)
+  }
+
   function hoverOverHandler() {
     // change content on hover at resume maker header
     setTitleContent((prevdata) => (prevdata = "Resume Maker"));
@@ -68,6 +89,7 @@ const Choices = () =>{
             className="selectChoice"
             id="RESUME"
             onMouseEnter={hoverHandler}
+            onClick={clickHandler}
           >
             Resume
           </button>
@@ -75,6 +97,7 @@ const Choices = () =>{
             className="selectChoice"
             id="COVERLETTER"
             onMouseEnter={hoverHandler}
+            onClick={clickHandler}
           >
             Cover Letters
           </button>
@@ -82,6 +105,7 @@ const Choices = () =>{
             className="selectChoice"
             id="ABOUTME"
             onMouseEnter={hoverHandler}
+            onClick={clickHandler}
           >
             About me
           </button>

@@ -51,7 +51,7 @@
     text-align: justify;
 }
 .choiceDefinition::first-letter{
-    color: crimson;
+    color:#2f58cd;
     font-size: 40px;
 }
 
