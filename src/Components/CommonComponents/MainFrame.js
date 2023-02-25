@@ -12,13 +12,11 @@ import Button from "./Button";
 import Preview from "./Preview";
 import TemplateImage from "./TemplateImage";
 import ImageArray from "../Utilities/ImageImports/ImageImports";
+import Header from "./Header";
+import Footer from "./Footer";
 
 // importing constants
 import Constants from "../Utilities/Constants/Constants";
-
-// importing components
-import Header from "./Header";
-import Footer from "./Footer";
 
 function MainFrame(props) {
   const navigateToNewPath = useNavigate();
