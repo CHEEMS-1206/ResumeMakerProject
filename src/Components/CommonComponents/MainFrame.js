@@ -70,25 +70,40 @@ function MainFrame(props) {
     event.target.classList.remove("imageHover");
   }
 
-  // button click handler
+  // button click handler to move back and forth
   function btnClickHandler(event) {
     let path = "";
+    // if button is for returning purpose
     if (event.target.id === "BACK") {
       path = "/";
 
       // when returning back .. removing the selected image item
-      Constants.selectedTemplate.id = ""
+      Constants.selectedTemplate.id = "";
       Constants.selectedTemplate.imageSrc = "";
       Constants.selectedTemplate.imageSubtitle = "";
+
+    // if button is for proceeding purpose
+    } else if (event.target.id === "PROCEED") {
+      // if proceeding from resumeTemplates
+      if (props.locationPath === "/ResumeTemplates") {
+        path = "/ResumeForm";
+
+      }
+      // if procceding from coverLetterTemplates
+      else if (props.locationPath === "/CoverLetterTemplates") {
+        console.log("is");
+        path = "/CoverLetterForm";
+      }
     }
     navigateToNewPath(path);
   }
 
+  console.log(props.locationPath);
   // btn hover handler if any
   function btnHoverHandler() {}
 
   // here we have selected template printed on the console
-  console.log(Constants.selectedTemplate)
+  console.log(Constants.selectedTemplate);
 
   return (
     <>
