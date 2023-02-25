@@ -5,95 +5,73 @@
 }
 
 /* common style for the header choiceHolder and footer  */
-.header, .choiceHolder, .footer {
-  display: flex;
-  width: 100%;
-}
-/* common style for the headerand footer  */
-.header,.footer {
-  background-color: #2f58cd;
-  color: white;
-  align-items: center;
-  display: flex;
-}
-
-/* styling th header  */
-.header {
-  height: 15%;
-  font-size: 50px;
-  padding: 0px 30px;
-  font-weight: 900;
-}
-
-/* styling the footer  */
-.footer {
-  height: 7%;
-  justify-content: center;
-}
 
 /* styling the choiceholder  */
 .choiceHolder {
-  height: calc(100% - 17%);
+  display: flex;
+  width: 100%;
+  height: calc(100% - 90px);
   padding: 0px 100px;
 }
-.choiceHolder > div{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.choiceHolder > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.definitionBox{
-    padding: 0px 50px;
+.definitionBox {
+  padding: 0px 50px;
 }
-.choiceDefinition{
-    font-size: 18px;
-    text-align: justify;
+.choiceDefinition {
+  font-size: 18px;
+  text-align: justify;
 }
-.choiceDefinition::first-letter{
-    color:#2f58cd;
-    font-size: 40px;
+.choiceDefinition::first-letter {
+  color: #2f58cd;
+  font-size: 40px;
 }
 
 /* styling the image  */
-.choiceImage{
-    height: 250px;
-    width: 190px;
-    margin: 20px 0px;
+.choiceImage {
+  height: 250px;
+  width: 190px;
+  margin: 20px 0px;
 }
 
 /* styles for the title  */
-.title{
-    font-size: 42px;
-    width: 100%;
-    color :#2f58cd;
-    text-align: left;
+.title {
+  font-size: 42px;
+  width: 100%;
+  color: #2f58cd;
+  text-align: left;
 }
 
 /* Styling the buttons */
-.selectChoice{
-    height: max-content;
-    min-width: 250px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    padding: 15px 25px;
-    margin-bottom: 15px;
-    color:white;
-    outline: none;
-    border: none;
+.selectChoice {
+  height: max-content;
+  min-width: 250px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  color: white;
+  outline: none;
+  border: none;
 }
-#RESUME{
-    background-color: crimson;
+#RESUME {
+  background-color: crimson;
 }
-#RESUME:hover, #COVERLETTER:hover, #ABOUTME:hover{
-    transform: scale3d(1.02, 1.1, 20);
-    transition: all 0.3s ease-in;
+#RESUME:hover,
+#COVERLETTER:hover,
+#ABOUTME:hover {
+  transform: scale3d(1.02, 1.1, 20);
+  transition: all 0.3s ease-in;
 }
-#COVERLETTER{
-    background-color: #1abc9c;
+#COVERLETTER {
+  background-color: #1abc9c;
 }
-#ABOUTME{
-    background-color: #2f58cd;
+#ABOUTME {
+  background-color: #2f58cd;
 }
-
