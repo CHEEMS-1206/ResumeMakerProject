@@ -18,6 +18,7 @@ const coverLetterDetails = {
 function CoverLetterTemplates(){
     return (
       <MainFrame
+        locationPath={"/CoverLetterTemplates"}
         mainFrameDetails={coverLetterDetails}
         headerValue={Constants.headerValues.coverLetterHeader}
         footerValue={Constants.footerValues.footer}

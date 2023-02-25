@@ -16,6 +16,7 @@ const resumeDetails = {
 function ResumeTemplates() {
   return (
     <MainFrame
+      locationPath={"/ResumeTemplates"}
       mainFrameDetails={resumeDetails}
       headerValue={Constants.headerValues.resumePageHeader}
       footerValue={Constants.footerValues.footer}
