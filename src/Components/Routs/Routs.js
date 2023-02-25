@@ -14,6 +14,8 @@ import CLTemplate1 from "../CoverLetters/Templates/CLTemplate1";
 import CLTemplate2 from "../CoverLetters/Templates/CLTemplate2";
 import CoverLetterPreview from "../CoverLetters/CoverLetterPreview";
 
+import AboutMe from "../AboutMe/AboutMe";
+
 const routerName = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +57,10 @@ const routerName = createBrowserRouter([
     path: "/CoverLetterPreview",
     element: <CoverLetterPreview />,
   },
+  {
+    path: "AboutMe",
+    element: <AboutMe/>
+  }
 ]);
 
 export default routerName;
