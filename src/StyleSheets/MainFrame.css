@@ -1,0 +1,65 @@
+/* styling the main frame  */
+.mainFrame {
+  height: calc(100vh - 125px);
+  width: 100vw;
+  display: flex;
+  flex-flow: row;
+  padding: 30px 60px;
+}
+.mainFrame > div {
+  height: 90%;
+  display: flex;
+  flex-flow: column;
+}
+
+/* styling the preview holder area  */
+.previewHolder{
+  width: 35%;
+  margin-right: 5%;
+}
+.previewHolder h1 {
+  font-size: 25px;
+  color: #2f58cd;
+  text-align: center;
+  padding: 10px 15px;
+}
+.previewSelection {
+  align-self: center;
+  height: 100%;
+  width: 80%;
+}
+
+/* styling the template options area  */
+.templateHolder{
+  width :60%;
+  /* border:1px solid red; */
+  padding : 15px
+}
+.templatesBlock{
+    height: 80%;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    flex-wrap: nowrap;
+}
+.templateBlock > div{
+    display: flex;
+    flex-flow: row;
+}
+
+/* styling the button block */
+.buttonBlock{
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* styling the color code for the proceed button  */
+#PROCEED {
+  background-color: #2f58cd;
+}
+#BACK {
+  background-color: #2f58cd;
+}
