@@ -9,3 +9,39 @@ body{
   height: 100vh;
   width: 100vw;
 }
+
+/* // common footer and header stylees //  */
+
+/* common style for the header choiceHolder and footer  */
+.header, .footer {
+  display: flex;
+  width: 100%;
+}
+/* common style for the headerand footer  */
+.header,.footer {
+  background-color: #2f58cd;
+  color: white;
+  align-items: center;
+  display: flex;
+}
+/* styling th header  */
+.header {
+  height: 80px;
+  font-size: 36px;
+  padding: 0px 30px;
+  font-weight: 900;
+}
+/* styling the footer  */
+.footer {
+  height: 45px;
+  justify-content: center;
+}
+
+/* // hovering images effects //  */
+.imageHover:hover,#selected{
+  transform: scale3d(1.12,1.1,40);
+  transition: transform 0.3s ease-in;
+}
+.imageSelected{
+  border: 5px solid #2f58cd;
+}
