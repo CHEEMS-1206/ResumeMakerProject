@@ -5,6 +5,15 @@
 /.pnp
 .pnp.js
 sample.txt
+
+# about me page contents
+AboutMe.css
+AboutMe
+
+#ignore for now
+src/Components/Resume/ResumePreview.js
+src/Components/CoverLetters/CoverLetterPreview.js
+
 # testing
 /coverage
 
