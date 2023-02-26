@@ -91,14 +91,12 @@ function MainFrame(props) {
       }
       // if procceding from coverLetterTemplates
       else if (props.locationPath === "/CoverLetterTemplates") {
-        console.log("is");
         path = "/CoverLetterForm";
       }
     }
     navigateToNewPath(path);
   }
 
-  console.log(props.locationPath);
   // btn hover handler if any
   function btnHoverHandler() {}
 
