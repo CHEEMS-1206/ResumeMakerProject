@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+.container{
+    height: max-content;
+    width: 50%;
+    margin: 0px auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.steps{
+    height: 80px;
+    width:400px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column;
+}
+.num{
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    color:#7f8c8d;
+    background-color: white;
+    cursor: grab;
+    border:3px solid #7f8c8d;
+}
+.empty{
+    width: 60px;
+    height: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #bdc3c7;
+    align-self: center;
+    cursor: grab;
+}
+.btnContainer{
+    justify-self: center;
+    height: 50px;
+    width: 250px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+button{
+    height: max-content;
+    min-width: 80px;
+    width: max-content;
+    padding: 8px 10px;
+    font-size: 15px;
+    background-color:  #2f58cd;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer
+}
+.levDone{
+    background-color:  #2f58cd;
+}
+
+.stepDone{
+    border:3px solid  #2f58cd;
+}
