@@ -1,0 +1,5 @@
+.proceedPageContainer {
+  height: calc(100vh - 125px);
+  width: 100%;
+  display: flex;
+}
