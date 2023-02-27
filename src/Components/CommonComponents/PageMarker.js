@@ -3,9 +3,14 @@ import React, { useState } from "react";
 // importing style
 import "../../StyleSheets/PageMarker.css";
 
-let currStep = 1;
-let curreLevel = 0;
+// importing constatnts
+import Constants from "../Utilities/Constants/Constants";
 
+// importing components
+import Button from "./Button";
+import FormContainer from "./FormContainer";
+
+// inbuilt style
 let stylingPageMarker = {
   prevBtn: {
     backgroundColor: "#7f8c8d",
@@ -17,7 +22,9 @@ let stylingPageMarker = {
 
 function PageMarker(props) {
   // defining states
-  const [PageMarker, setPageMarker] = useState(stylingPageMarker); // state for button colors
+  let [PageMarker, setPageMarker] = useState(stylingPageMarker); // state for button colors
+  let [currStep, setCurrStep] = useState(1);
+  let [curreLevel, setCurrLevel] = useState(0);
 
   // all number of circular blobs - steps
   let steps = document.getElementsByClassName("num");
@@ -26,87 +33,83 @@ function PageMarker(props) {
 
   // adding levDone class to steps and levels on nextBtn click
   function setStepsAndLevels() {
-    steps[currStep - 1].classList.add("stepDone");
-    levels[curreLevel - 1].classList.add("levDone");
+    steps[currStep].classList.add("stepDone");
+    levels[curreLevel].classList.add("levDone");
+    console.log("set");
   }
   // removing levDone class from buttons on prevBtn click
   function unSetStepsAndLevels() {
-    steps[currStep].classList.remove("stepDone");
-    levels[curreLevel].classList.remove("levDone");
+    steps[currStep - 1].classList.remove("stepDone");
+    levels[curreLevel - 1].classList.remove("levDone");
+    console.log("unset");
   }
 
   // on clicking previous button
   function prevBtnClickHandler(event) {
     // changing counts and button colors
-    if (currStep === 1) {
-    } else if (currStep === 2) {
-      setPageMarker(
-        (prevData) =>
-          (prevData = {
-            prevBtn: {
-              backgroundColor: "#7f8c8d",
-            },
-            nextBtn: {
-              backgroundColor: "#2f58cd",
-            },
-          })
-      );
-      currStep--;
-      curreLevel--;
-    } else {
-      setPageMarker(
-        (prevData) =>
-          (prevData = {
-            prevBtn: {
-              backgroundColor: "#2f58cd",
-            },
-            nextBtn: {
-              backgroundColor: "#2f58cd",
-            },
-          })
-      );
-      currStep--;
-      curreLevel--;
+    if (currStep > 1) {
+      if (currStep === 2) {
+        setPageMarker(
+          (prevData) =>
+            (prevData = {
+              prevBtn: {
+                backgroundColor: "#7f8c8d",
+              },
+              nextBtn: {
+                backgroundColor: "#2f58cd",
+              },
+            })
+        );
+        setCurrLevel((prev) => (prev = prev - 1));
+        setCurrStep((prev) => (prev = prev - 1));
+      } else {
+        setPageMarker(
+          (prevData) =>
+            (prevData = {
+              prevBtn: {
+                backgroundColor: "#2f58cd",
+              },
+              nextBtn: {
+                backgroundColor: "#2f58cd",
+              },
+            })
+        );
+        setCurrLevel((prev) => (prev = prev - 1));
+        setCurrStep((prev) => (prev = prev - 1));
+      }
+      unSetStepsAndLevels();
+      console.log(currStep, "prev", curreLevel);
     }
-    unSetStepsAndLevels();
-    console.log(currStep, "prev", curreLevel);
   }
 
   //on clicking next button
   function nextBtnClickHandler(event) {
     // changing counts and button colors
-    if (currStep === props.numOfSteps) {
-    } else if (currStep === props.numOfSteps - 1) {
-      setPageMarker(
-        (prevData) =>
-          (prevData = {
-            prevBtn: {
-              backgroundColor: "#2f58cd",
-            },
-            nextBtn: {
-              backgroundColor: "#7f8c8d",
-            },
-          })
-      );
-      currStep++;
-      curreLevel++;
-    } else {
-      setPageMarker(
-        (prevData) =>
-          (prevData = {
-            prevBtn: {
-              backgroundColor: "#2f58cd",
-            },
-            nextBtn: {
-              backgroundColor: "#2f58cd",
-            },
-          })
-      );
-      currStep++;
-      curreLevel++;
+    if (currStep < props.numOfSteps) {
+      if (currStep === props.numOfSteps - 1) {
+        setPageMarker(
+          (prevData) =>
+            (prevData = {
+              prevBtn: { backgroundColor: "#2f58cd" },
+              nextBtn: { backgroundColor: "#7f8c8d" },
+            })
+        );
+        setCurrLevel((prev) => (prev = prev + 1));
+        setCurrStep((prev) => (prev = prev + 1));
+      } else {
+        setPageMarker(
+          (prevData) =>
+            (prevData = {
+              prevBtn: { backgroundColor: "#2f58cd" },
+              nextBtn: { backgroundColor: "#2f58cd" },
+            })
+        );
+        setCurrLevel((prev) => (prev = prev + 1));
+        setCurrStep((prev) => (prev = prev + 1));
+      }
+      setStepsAndLevels();
+      console.log(currStep, "next", curreLevel);
     }
-    setStepsAndLevels();
-    console.log(currStep, "next", curreLevel);
   }
 
   // logic for number of steps
@@ -132,29 +135,52 @@ function PageMarker(props) {
     }
   }
 
+  console.log(currStep, curreLevel);
+
   return (
-    <div className="container">
-      <div className="steps">
-        {renderedElements}
-        {/* rendering steps and levels in the page  */}
+    <>
+      <div className="container">
+        <div className="steps">
+          {renderedElements}
+          {/* rendering steps and levels in the page  */}
+        </div>
+        <div className="btnContainer">
+          <button
+            id="prev"
+            className="pageMarkerButtons"
+            style={PageMarker.prevBtn}
+            onClick={prevBtnClickHandler}
+          >
+            Prev
+          </button>
+          <button
+            id="next"
+            className="pageMarkerButtons"
+            style={PageMarker.nextBtn}
+            onClick={nextBtnClickHandler}
+          >
+            Next
+          </button>
+        </div>
       </div>
-      <div className="btnContainer">
-        <button
-          id="prev"
-          style={PageMarker.prevBtn}
-          onClick={prevBtnClickHandler}
-        >
-          Prev
-        </button>
-        <button
-          id="next"
-          style={PageMarker.nextBtn}
-          onClick={nextBtnClickHandler}
-        >
-          Next
-        </button>
+      <FormContainer className="formContainer" />
+      <div className="ProceedPageButtonContainer">
+        <Button
+          // onMouseEnter={btnHoverHandler}
+          // onClick={btnClickHandler}
+          buttonValue={Constants.buttonValues.back}
+          className="ProceedPageButtons"
+          id="PREVIOUS"
+        />
+        <Button
+          // onMouseEnter={btnHoverHandler}
+          // onClick={btnClickHandler}
+          buttonValue={Constants.buttonValues.preview}
+          className="ProceedPageButtons"
+          id="PREVIEW"
+        />
       </div>
-    </div>
+    </>
   );
 }
 export default PageMarker;
