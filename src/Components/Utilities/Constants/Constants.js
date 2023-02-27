@@ -19,6 +19,7 @@ const Constants = {
     next: "Next",
     previous: "Previous",
     proceed: "Proceed",
+    preview : "Preview",
     download: "Download",
     back : "Return"
   },
