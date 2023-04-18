@@ -1,11 +1,9 @@
 import React from "react";
 
-function FormContainer(props){
-    return (
-    <div className={props.className}>
-        <div></div>
-        <div></div>
-    </div>
-    );
+//importing styles
+import "../../StyleSheets/formRelatedStyles.css";
+function FormContainer(props) {
+  // console.log(props.check);
+  return <>{props.formElements}</>;
 }
 export default FormContainer;
