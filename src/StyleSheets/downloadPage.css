@@ -1,0 +1,15 @@
+*{
+  border:1px solid red
+}
+p {
+  font-size: 16px;
+}
+li{
+    font-size: 14px;
+    padding: 2px 0px;
+    margin-left: 10px;
+    list-style-type: disc;
+}
+a {
+  color: cadetblue;
+}

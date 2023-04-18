@@ -1,6 +1,27 @@
-.proceedPageContainer {
+.proceedPageContainer{
   height: calc(100vh - 125px);
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+.ProceedPageButtonContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 10%;
+  height: 80px;
+}
+.ProceedPageButtons{
+  height: max-content;
+  min-width: 150px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 15px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: #2f58cd;
+  border-radius: 3px;
 }

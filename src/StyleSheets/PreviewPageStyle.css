@@ -1,0 +1,40 @@
+*{
+    /* border:1px solid red */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.previewPageContainer {
+  height: calc(100vh - 125px);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.previewPageLayoutContainer{
+    width : 67%;
+    /* background-color:aquamarine; */
+    overflow: auto;
+}
+.previewPageBtnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+}
+
+.previewPageBtn {
+  background-color: #2f58cd;
+  border-radius: 3px;
+  height: max-content;
+  min-width: 250px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  color: white;
+  outline: none;
+  border: none;
+}

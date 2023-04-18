@@ -7,7 +7,7 @@
   padding: 30px 60px;
 }
 .mainFrame > div {
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-flow: column;
 }
@@ -15,6 +15,7 @@
 /* styling the preview holder area  */
 .previewHolder{
   width: 35%;
+  height: 100%;
   margin-right: 5%;
 }
 .previewHolder h1 {

@@ -1,0 +1,71 @@
+* {
+  /* border:1px solid red */
+}
+/* // */
+/*  form container  */
+/* .formHeading {
+  height: 60px;
+  padding: 10px 20px;
+  font-size: 25px;
+  color:white;
+  width: 80%;
+  margin: 0 10%;
+  background-color: #2f58cd;
+  border: 1px solid red;
+} */
+.formContainer {
+  /* box-shadow: #7f8c8d 2px 2px 2px, #7f8c8d -2px -2px 2px; */
+  width: 80%;
+  margin: 0 auto;
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formArea,
+.headerArea {
+  width: 48%;
+  margin: 10px 0;
+  font-size: 25px;
+  padding: 8px 10px;
+  overflow: auto;
+}
+legend {
+  color: #2f58cd;
+}
+
+.formArea > div {
+  padding: 1px 8px;
+  align-items: flex-start;
+  display: flex;
+  margin: 10px 0px 5px 0px;
+}
+.formContainer input, .formContainer select {
+  width: 280px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 6px 10px;
+  margin: 6px 0;
+  box-shadow: #7f8c8d 2px 2px 5px;
+}
+.formContainer label {
+  font-family: 500;
+  font-size: 17px;
+  display: inline-block;
+  width: 170px;
+}
+textarea {
+  height: 100px;
+  width: 280px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 6px 10px;
+  margin: 6px 0;
+  box-shadow: #7f8c8d 2px 2px 5px;
+}

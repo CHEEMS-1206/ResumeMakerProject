@@ -69,34 +69,3 @@
 .stepDone{
     border:3px solid  #2f58cd;
 }
-
-/* // */
-/*  form container  */
-.formContainer{
-  /* background-color: aqua; */
-  box-shadow: #7f8c8d 2px 2px 2px, #7f8c8d -2px -2px 2px;
-  width: 80%;
-  margin: 0 10%;
-  height: calc(100% - 200px);
-}
-.ProceedPageButtonContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width:80%;
-    margin: 0 10%;
-    height: 80px;
-}
-.ProceedPageButtons{
-  height: max-content;
-  min-width: 150px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 10px 15px;
-  color: white;
-  outline: none;
-  border: none;
-  background-color: #2f58cd;
-  border-radius: 3px;
-}
