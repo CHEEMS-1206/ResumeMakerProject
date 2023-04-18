@@ -12,8 +12,6 @@ import CoverLetterTemplates from "../CoverLetters/CoverLetterTemplate";
 import CoverLetterPreview from "../CoverLetters/CoverLetterPreview";
 import CoverLetterProceed from "../CoverLetters/CoverLetterProceed";
 
-import AboutMe from "../AboutMe/AboutMe";
-
 const routerName = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +26,10 @@ const routerName = createBrowserRouter([
     element: <ResumePreview />,
   },
   {
+    path: "/ResumeForm",
+    element: <ResumeProceed />,
+  },
+  {
     path: "/CoverLetterTemplates",
     element: <CoverLetterTemplates />,
   },
@@ -36,16 +38,8 @@ const routerName = createBrowserRouter([
     element: <CoverLetterPreview />,
   },
   {
-    path: "AboutMe",
-    element: <AboutMe />,
-  },
-  {
-    path: "/ResumeForm",
-    element: <ResumeProceed />,
-  },
-  {
     path: "/CoverLetterForm",
-    element: <CoverLetterProceed/>,
+    element: <CoverLetterProceed />,
   },
 ]);
 
