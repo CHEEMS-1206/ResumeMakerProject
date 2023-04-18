@@ -101,7 +101,7 @@ function MainFrame(props) {
   function btnHoverHandler() {}
 
   // here we have selected template printed on the console
-  console.log(Constants.selectedTemplate);
+  // console.log(Constants.selectedTemplate);
 
   return (
     <>
