@@ -2,7 +2,7 @@
 import resume from "../../Images/resume.jpg";
 import logo from "../../Images/logo.png";
 import coverLetter from "../../Images/coverLetter.jpg";
-import preview from '../../Images/preview.webp'
+import preview from '../../Images/preview.jpg'
 
 const ImageArray = {
     resume : resume,
