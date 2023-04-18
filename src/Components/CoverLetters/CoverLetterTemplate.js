@@ -4,9 +4,9 @@ import React from "react";
 import MainFrame from "../CommonComponents/MainFrame";
 
 //importing the rseume template images
-import coverLetter1 from "../Images/coverLetterTemplates/coverLetter1.webp";
-import coverLetter2 from "../Images/coverLetterTemplates/coverLetter2.jpg";
-import coverLetter3 from "../Images/coverLetterTemplates/coverLetter3.jpg";
+import coverLetter1 from "../Images/coverLetterTemplates/coverLetter1.png";
+import coverLetter2 from "../Images/coverLetterTemplates/coverLetter2.png";
+import coverLetter3 from "../Images/coverLetterTemplates/coverLetter3.png";
 import Constants from "../Utilities/Constants/Constants";
 
 // array of images and titles for every resume template
